@@ -15,6 +15,7 @@ It does **not** decrypt/encrypt save contents; it only swaps a small header bloc
 - **Optional:** can also overwrite Steam’s `saveXXXX.sav` after making a `.bak` backup
 
 ### Mode 2 — **Steam → Game Pass** (`steam_to_gp`)
+- **NOTE:** This path hasn't been tested as much as GP to steam so more unstable
 - **Input:** a Steam `saveXXXX.sav`
 - **Header source:** a Game Pass WGS payload file you provide (header donor)
 - **Action:** copies the **first 16 bytes** from the Game Pass header source onto the Steam save
@@ -51,4 +52,5 @@ Slot number maps to filenames:
 ### Option B: Run the EXE from command line
 PowerShell (same works in CMD with minor quoting changes):
 ```powershell
+
 .\metaphor_gp_to_steam.exe "C:\path\to\input_file"
